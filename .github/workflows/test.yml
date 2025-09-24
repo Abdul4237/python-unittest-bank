@@ -21,9 +21,11 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt;fi
       
+      - name: list dependencies
+        run: piplist
+
       - name: run tests
-        run: |
-          pytest
+        run: pytest
 
 	# your task: figure out the remainings steps 
 	# that match your selected language. 
